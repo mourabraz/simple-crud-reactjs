@@ -1,0 +1,64 @@
+:root {
+  --background-color: #2193b0;
+  --background-color-secondary: #6dd5ed;
+  --background-color-main: #f2f2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--background-color);
+  background: -webkit-linear-gradient(
+    155deg,
+    var(--background-color),
+    var(--background-color-secondary)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    155deg,
+    var(--background-color),
+    var(--background-color-secondary)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+body,
+input,
+button {
+  color: #222;
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 80px 1fr 40px;
+  grid-template-areas:
+    'header header'
+    'menu content'
+    'footer footer';
+
+  height: 100vh;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
